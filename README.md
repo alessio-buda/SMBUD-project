@@ -1,8 +1,6 @@
 # SMBUD-project
 
-# Bibliographic Database for Scientific Publications
-
-This repository showcases a university project focused on creating a bibliographic database for managing and querying large-scale datasets of scientific publications. The project was completed as part of the **Systems and Methods for Big and Unstructured Data (SMBUD)** course.
+This repository showcases a university project focused on creating a bibliographic database for managing and querying large-scale datasets of scientific publications. The project was completed as part of the **Systems and Methods for Big and Unstructured Data (SMBUD)** course held at Politecnico di Milano by Prof. Marco Brambilla (academic year 2022-23).
 
 ## Project Overview
 
@@ -13,18 +11,27 @@ The project involves the design and implementation of a bibliographic database t
 - Unique identifiers like DOI and ORCID.
 - Relationships between articles, such as citations and references.
 
-Key deliverables include:
+Deliverables include:
+
+### First Delivery
 
 - An Entity-Relationship (ER) model for data design.
 - A graph-based implementation using Neo4j.
-- Python scripts for data import, preprocessing, and querying.
-- Documentation and analysis of the project's outcomes.
+
+### Second Delivery
+
+- A document-based implementation using MongoDB.
+
+### Third Delivery
+
+- Query examples using Apache Spark.
+- Minor fixes to previous deliveries
+
+**NOTE**: Python scripts for data import, preprocessing, and querying can be found in the report pdf files.
 
 ## Repository Structure
 
-- **/reports**: Comprehensive documentation of the project, including ER diagrams, query examples, and analysis.
-- **/examples**: Python scripts for interacting with the database, such as importing data and running queries.
-- **/resources**: References and links to external tools and datasets used.
+- **/Deliveables**: Comprehensive documentation of the project, including ER diagrams, query examples, and analysis.
 
 ## Features
 
@@ -32,28 +39,30 @@ Key deliverables include:
 
 - **ER Model**: Defines the entities (e.g., articles, authors) and their interrelationships.
 - **Graph Schema**: Implements the ER model in a graph database, enabling complex and efficient queries.
+- **Document Model**: A MongoDB implementation for storing and querying hierarchical and unstructured data.
 
-### Data Queries
+## Data Queries
 
-The project demonstrates advanced querying capabilities using Neo4j's Cypher language. Examples include:
+The project showcases advanced querying capabilities using:
+
+- **Cypher (Neo4j)**: Graph-based queries for analyzing relationships and shortest paths.
+- **MongoDB Aggregation Framework**: Queries to extract insights from document-based data.
+- **Apache Spark**: Distributed data processing for large-scale computations, including advanced filtering, transformations, and aggregations.
+
+Example queries include:
 
 - Retrieving all articles authored by a specific individual.
-- Finding the shortest path between two articles.
-- Aggregating publication data by venue or author.
-
-### Python Integration
-
-Python scripts support the database operations, including:
-
-- Importing bibliographic data from XML sources.
-- Executing Cypher queries to extract insights.
-- Analyzing relationships and metadata.
+- Finding the shortest path between two articles using Neo4j.
+- Aggregating publication data by author or venue in MongoDB.
+- Performing keyword-based searches and complex joins using Spark.
 
 ## Getting Started
 
 ### Prerequisites
 
 - **Neo4j Database**: Install and configure a local or cloud-based Neo4j instance.
+- **MongoDB**: Install MongoDB for document-based storage and querying.
+- **Apache Spark**: Set up Spark for distributed data processing.
 - **Python**: Use the provided scripts for database interaction.
 
 ### Steps
@@ -62,8 +71,7 @@ Python scripts support the database operations, including:
    ```bash
    git clone https://github.com/yourusername/bibliographic-database.git
    ```
-2. Review the reports in `/reports` to understand the project architecture and methodology.
-3. Use the Python scripts in `/examples` to set up the database and run queries.
+2. Review the reports in `/Deliverables` to understand the project architecture and methodology.
 
 ## References
 
@@ -71,9 +79,10 @@ Python scripts support the database operations, including:
 - [DOI System](https://www.doi.org/)
 - [ORCID](https://orcid.org/)
 
-## Contact
+## Authors
 
-For any queries or suggestions, feel free to contact:
-
-- **Author**: Alessio Buda
-- **Instructor**: Marco Brambilla ([marco.brambilla@polimi.it](mailto:marco.brambilla@polimi.it))
+- Alessio Buda
+- Leonardo Cesani
+- Fausto Lasca
+- Gabriele Munafo'
+- Matteo Paraboschi
